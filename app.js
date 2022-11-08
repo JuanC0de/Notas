@@ -13,15 +13,19 @@ calculateButton.addEventListener('click', () => {
     const sumNotes= note3Result+note2Result+note1Result;
     if(sumNotes>4.5){
         pResult.textContent = `Su nota es de${sumNotes}, nota Final Superior`; 
+        pResult.style.color = "blue";
     }
     else if (sumNotes>3.5 && sumNotes<4.5){
         pResult.textContent = `Su nota es de${sumNotes}, nota Final Buena`; 
+        pResult.style.color = "green";
     }
     else if (sumNotes>2.0 && sumNotes<3.5){
         pResult.textContent = `Su nota es de${sumNotes}, ha perdido la materia pero puedes recuperarla`; 
+        pResult.style.color = "yellow";
     }
     else{
         pResult.textContent = `Su nota es de${sumNotes}, debes repetir la materia`; 
+        pResult.style.color = "red";
     }
 });
 
